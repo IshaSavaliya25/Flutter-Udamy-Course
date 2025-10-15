@@ -1,0 +1,7 @@
+Flutter is framework created by google
+Develop applications for Android, iOS, Web, Desktop
+Dart Programming language
+
+Flutter is open source-anyone can use it for any given purpose
+Faster development Cycle-it takes less then 30 sec for first full compilation. Comes with Hot-Reload & Hot-Restart.
+Super Productive-due to Stateful Widget hot-reload feature flutter is very fast iterative coding style
