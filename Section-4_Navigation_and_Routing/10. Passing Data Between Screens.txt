@@ -1,0 +1,6 @@
+Passing Data Between Screens
+Send some information when moving between screens.
+Example: Sending user name, ID, or product details.
+
+Pass the data using Navigator.push
+Receiving Data Back (pop() with value)

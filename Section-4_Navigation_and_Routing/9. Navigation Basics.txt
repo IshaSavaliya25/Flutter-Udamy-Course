@@ -1,0 +1,14 @@
+Navigation could be of push() pop().
+Navigation to navigate one screen to another.
+
+Flutter uses a navigation stack (LIFO).
+push() → Go to next screen
+pop() → Go back to previous screen
+EXAMPLE:
+Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => SecondScreen()),
+);
+
+Navigator.pop(context);
+
