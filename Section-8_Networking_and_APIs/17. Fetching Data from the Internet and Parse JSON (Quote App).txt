@@ -1,0 +1,36 @@
+API → A service that provides data from the internet.
+Flutter interacts with APIs using the http package.
+
+Add HTTP package
+dependencies:
+  http: ^1.1.0
+
+Make a GET request
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+Future<String> fetchQuote() async {
+  final response = await http.get(Uri.parse("https://api.quotable.io/random"));
+
+  if (response.statusCode == 200) {
+    final data = jsonDecode(response.body);
+    return data['content']; // The quote text
+  } else {
+    throw Exception("Failed to load quote");
+  }
+}
+
+Use FutureBuilder to Display Data
+FutureBuilder(
+  future: fetchQuote(),
+  builder: (context, snapshot) {
+    if (snapshot.connectionState == ConnectionState.waiting) {
+      return CircularProgressIndicator();
+    }
+    if (snapshot.hasError) {
+      return Text("Error");
+    }
+    return Text(snapshot.data.toString());
+  },
+)
+
